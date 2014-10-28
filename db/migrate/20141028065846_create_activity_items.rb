@@ -1,13 +1,14 @@
-class CreateAcitivityItems < ActiveRecord::Migration
+class CreateActivityItems < ActiveRecord::Migration
   def change
-    create_table :acitivity_items do |t|
-      t.string :activity_name
+    create_table :activity_items do |t|
+      t.string :activity_item
       t.date :activity_date
       t.time :starting_time
       t.time :ending_time
       t.string :activity_note
       t.boolean :activity_starred
-      t.integer :calendar_user_id
+      t.integer :user_id
+      t.string :activity_color
 
       t.timestamps
     end

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class AcitivityItemTest < ActiveSupport::TestCase
+class ActivityItemTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

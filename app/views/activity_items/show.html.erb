@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Activity item:</strong>
+  <%= @activity_item.activity_item %>
+</p>
+
+<p>
+  <strong>Activity date:</strong>
+  <%= @activity_item.activity_date %>
+</p>
+
+<p>
+  <strong>Starting time:</strong>
+  <%= @activity_item.starting_time %>
+</p>
+
+<p>
+  <strong>Ending time:</strong>
+  <%= @activity_item.ending_time %>
+</p>
+
+<p>
+  <strong>Activity note:</strong>
+  <%= @activity_item.activity_note %>
+</p>
+
+<p>
+  <strong>Activity starred:</strong>
+  <%= @activity_item.activity_starred %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @activity_item.user_id %>
+</p>
+
+<p>
+  <strong>Activity color:</strong>
+  <%= @activity_item.activity_color %>
+</p>
+
+<%= link_to 'Edit', edit_activity_item_path(@activity_item) %> |
+<%= link_to 'Back', activity_items_path %>

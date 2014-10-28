@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141026122147) do
+ActiveRecord::Schema.define(version: 20141028065846) do
 
   create_table "acitivity_items", force: true do |t|
     t.string   "activity_name"
@@ -20,7 +20,21 @@ ActiveRecord::Schema.define(version: 20141026122147) do
     t.time     "ending_time"
     t.string   "activity_note"
     t.boolean  "activity_starred"
-    t.integer  "calendar_user_id"
+    t.integer  "user_id"
+    t.string   "activity_color"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "activity_items", force: true do |t|
+    t.string   "activity_item"
+    t.date     "activity_date"
+    t.time     "starting_time"
+    t.time     "ending_time"
+    t.string   "activity_note"
+    t.boolean  "activity_starred"
+    t.integer  "user_id"
+    t.string   "activity_color"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
