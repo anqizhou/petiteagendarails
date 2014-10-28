@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141028065846) do
+ActiveRecord::Schema.define(version: 20141028082110) do
 
-  create_table "acitivity_items", force: true do |t|
-    t.string   "activity_name"
+  create_table "activity_items", force: true do |t|
+    t.string   "activity_item"
     t.date     "activity_date"
     t.time     "starting_time"
     t.time     "ending_time"
@@ -26,15 +26,13 @@ ActiveRecord::Schema.define(version: 20141028065846) do
     t.datetime "updated_at"
   end
 
-  create_table "activity_items", force: true do |t|
-    t.string   "activity_item"
-    t.date     "activity_date"
-    t.time     "starting_time"
-    t.time     "ending_time"
-    t.string   "activity_note"
-    t.boolean  "activity_starred"
+  create_table "task_items", force: true do |t|
+    t.string   "task_name"
+    t.date     "task_date"
+    t.string   "task_note"
+    t.boolean  "task_starred"
     t.integer  "user_id"
-    t.string   "activity_color"
+    t.string   "task_color"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

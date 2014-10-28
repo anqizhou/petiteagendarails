@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  task_name: MyString
+  task_date: 2014-10-28
+  task_note: MyString
+  task_starred: false
+  user_id: 1
+  task_color: MyString
+
+two:
+  task_name: MyString
+  task_date: 2014-10-28
+  task_note: MyString
+  task_starred: false
+  user_id: 1
+  task_color: MyString
