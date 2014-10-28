@@ -1,0 +1,45 @@
+<%= form_for(@acitivity_item) do |f| %>
+  <% if @acitivity_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@acitivity_item.errors.count, "error") %> prohibited this acitivity_item from being saved:</h2>
+
+      <ul>
+      <% @acitivity_item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :activity_name %><br>
+    <%= f.text_field :activity_name %>
+  </div>
+  <div class="field">
+    <%= f.label :activity_date %><br>
+    <%= f.date_select :activity_date %>
+  </div>
+  <div class="field">
+    <%= f.label :starting_time %><br>
+    <%= f.time_select :starting_time %>
+  </div>
+  <div class="field">
+    <%= f.label :ending_time %><br>
+    <%= f.time_select :ending_time %>
+  </div>
+  <div class="field">
+    <%= f.label :activity_note %><br>
+    <%= f.text_field :activity_note %>
+  </div>
+  <div class="field">
+    <%= f.label :activity_starred %><br>
+    <%= f.check_box :activity_starred %>
+  </div>
+  <div class="field">
+    <%= f.label :calendar_user_id %><br>
+    <%= f.number_field :calendar_user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
