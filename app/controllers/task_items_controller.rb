@@ -1,4 +1,5 @@
 class TaskItemsController < ApplicationController
+  # before_action :authenticate_user!
   before_action :set_task_item, only: [:show, :edit, :update, :destroy]
 
   # GET /task_items

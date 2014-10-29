@@ -1,4 +1,5 @@
 class ActivityItemsController < ApplicationController
+  # before_action :authenticate_user!
   before_action :set_activity_item, only: [:show, :edit, :update, :destroy]
 
   # GET /activity_items
