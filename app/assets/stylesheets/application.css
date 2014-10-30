@@ -230,6 +230,10 @@ td {
 /*  overflow: auto;*/
 }
 
+.row_half {
+  background-color: #F7F7F7;
+}
+
 .tasks_rowhead {
   float: left;
   width: 10%;
