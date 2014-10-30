@@ -221,6 +221,7 @@ td {
 .calendar_body {
   height:500px;
   overflow: auto;
+  position: relative;
 }
 
 .tasks_section {
