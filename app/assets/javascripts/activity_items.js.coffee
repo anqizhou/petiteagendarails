@@ -38,7 +38,7 @@ $ ->
 
 
     # Posting
-    $("<div class='added-appointment' style='width:#{boxWidth};height:#{boxHeight}px;background-color:#{boardColor};position:absolute;top:#{marginTop}px;left:#{marginLeft};border-radius:2%; padding:2%;'>#{activityTitle}</div>").appendTo(".calendar_body")
+    $("<div class='added-appointment' style='width:#{boxWidth};height:#{boxHeight}px;background-color:#{boardColor};position:absolute;top:#{marginTop}px;left:#{marginLeft};border-radius:3%;padding:2%;opacity:0.7;font-weight:bold;'>#{activityTitle}</div>").appendTo(".calendar_body")
       # $(this).css({
       #   "width": "#{boxWidth}",
       #   "height": "#{boxHeight}",
@@ -46,6 +46,8 @@ $ ->
       #   "position": "absolute",
       #   "top": "#{marginTop}",
       #   "left": "{marginLeft}",
-      #   "border-radius": "2%",
-      #   "vertical-align": "middle";
+      #   "border-radius": "3%",
+      #   "padding": "2%",
+      #   "opacity": "0.5",
+      #   "font-weight": "bold",
       # })
