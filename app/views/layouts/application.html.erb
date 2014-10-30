@@ -2,14 +2,33 @@
 <html>
 <head>
   <title>Petiteagendarails</title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+    <header>
+    <div class="header_section">
+      <a href="#"><img src="/app/assets/images/theme_night_owl.png" alt="Petite Agenda Logo"/></a>
+      <h1>Petite Agenda</h1>
+<!-- Need to deal with the link to login name here. If signed in, show name, if not signed in, link to sign in -->
+      <div class="username"><Login</div>
+
+      <div class="logout"><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></div>
+    </div>
+  </header>
 
 <%= yield %>
-  <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
 
+  <footer>
+    <ul>
+      <li>About Us</li>
+      <li>Contact Us</li>
+    </ul>
+  </footer>
 </body>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </html>

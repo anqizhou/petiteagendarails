@@ -1,0 +1,137 @@
+<div class="container">
+    <div class="board_section">
+      <div class="tab_area">
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="active"><a href="#">My activities</a></li>
+          <li><a href="#">Explore（coming soon)</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-star glyphicon-star-filled"></span> Starred</a></li>
+        </ul>
+      </div>
+      <div class="board_area">
+        <!-- 1st board starts here: -->
+        <div class="board activity_board board_1">
+
+          <form action="/activity_items" method="post">
+            <div class="board_title">
+              <input type="text" name="activity_item[activity_item]" class="board_title_input" placeholder="Add activity..."><span class="glyphicon glyphicon-edit"></span>
+            </div>
+            <input id="activity_item_activity_color" name="activity_item[activity_color]" type="text">
+            <div class="datetime_picker">
+              <input type="text" name="activity_item[activity_date]" class="board_date_input" placeholder="Oct/25">
+              <input type="text" name="activity_item[starting_time]" class="board_time_start_input" placeholder="10:00"> to
+              <input type="text" name="activity_item[ending_time]" class="board_time_end_input" placeholder="11:30">
+            </div>
+            <div class="board_note">
+              <textarea name="activity_item[activity_note]" class="board_note_input" rows="3" placeholder="Note"></textarea>
+            </div>
+            <input id="activity_item_activity_starred" name="activity_item[activity_starred]" type="checkbox" value="1">
+            <!-- <input id="activity_item_user_id" name="activity_item[user_id]" type="hidden" value="1"> -->
+            <input name="commit" type="submit" value="Add">
+            <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+          </form>
+
+        </div>
+        <!-- 1st board ends above -->
+
+        <!-- 2nd board starts here: -->
+        <div class="board board_2 task_board">
+          <form action="/task_items" method="post">
+            <div class="board_title">
+              <input type="text" name="task_item[task_name]" class="board_title_input" placeholder="Add task..."><span class="glyphicon glyphicon-edit"></span>
+            </div>
+            <div class="datetime_picker">
+              <input type="text" name="task_item[task_date]" class="date_input" placeholder="Oct/25"> * Optional
+            </div>
+            <div class="board_note">
+              <textarea name="task_item[task_note]" class="board_note_input" rows="3" placeholder="Note"></textarea>
+            </div>
+            <input id="task_item_task_starred" name="task_item[task_starred]" type="checkbox" value="1">
+            <!-- <input id="task_item_user_id" name="task_item[user_id]" type="hidden"> -->
+            <input name="commit" type="submit" value="Add">
+            <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+          </form>
+        </div>
+        <!-- 2nd board ends above -->
+        <!-- 3rd board starts here: -->
+        <div class="board board_3 activity_board board_exercise_default">
+          <form action="/activity_items" method="post">
+            <div class="board_title">
+              <input type="text" name="activity_item[activity_item]" class="board_title_input" placeholder="Exercise">
+            </div>
+            <div class="datetime_picker">
+              <input type="text" name="activity_item[activity_date]" class="board_date_input" placeholder="Oct/25">
+              <input type="text" name="activity_item[starting_time]" class="board_time_start_input" placeholder="10:00"> to
+              <input type="text" name="activity_item[ending_time]" class="board_time_end_input" placeholder="11:30">
+            </div>
+            <div class="board_note">
+              <textarea name="activity_item[activity_note]" class="board_note_input" rows="3" placeholder="Note"></textarea>
+            </div>
+            <input id="activity_item_activity_starred" name="activity_item[activity_starred]" type="checkbox" value="1">
+            <!-- <input id="activity_item_user_id" name="activity_item[user_id]" type="hidden" value="1"> -->
+            <input name="commit" type="submit" value="Add">
+            <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+          </form>
+        </div>
+        <!-- 3rd board ends above -->
+        <!-- 4th board starts here: -->
+        <div class="board board_4 activity_board board_homework_default">
+          <form action="/activity_items" method="post">
+            <div class="board_title">
+              <input name="activity_item[activity_item]" type="text" class="board_title_input" placeholder="Homework">
+            </div>
+            <div class="datetime_picker">
+              <input name="activity_item[activity_date]" type="text" class="board_date_input" placeholder="Oct/25">
+              <input name="activity_item[starting_time]" type="text" class="board_time_start_input" placeholder="10:00"> to
+              <input name="activity_item[ending_time]" type="text" class="board_time_end_input" placeholder="11:30">
+            </div>
+            <div class="board_note">
+              <textarea name="activity_item[activity_note]" class="board_note_input" rows="3" placeholder="Note"></textarea>
+            </div>
+            <input id="activity_item_activity_starred" name="activity_item[activity_starred]" type="checkbox" value="1">
+            <!-- <input id="activity_item_user_id" name="activity_item[user_id]" type="hidden" value="1"> -->
+            <input name="commit" type="submit" value="Add">
+            <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+          </form>
+        </div>
+        <!-- 4th board ends above -->
+        <!-- 5th board starts here -->
+        <div class="board board_5 activity_board board_playtime_default">
+          <form action="/activity_items" method="post">
+            <div class="board_title">
+              <input name="activity_item[activity_item]" type="text" class="board_title_input" placeholder="Playtime">
+            </div>
+            <div class="datetime_picker">
+              <input name="activity_item[activity_date]" type="text" class="board_date_input" placeholder="Oct/25">
+              <input name="activity_item[starting_time]" type="text" class="board_time_start_input" placeholder="10:00"> to
+              <input name="activity_item[ending_time]" type="text" class="board_time_end_input" placeholder="11:30">
+            </div>
+            <div class="board_note">
+              <textarea name="activity_item[activity_note]" class="board_note_input" rows="3" placeholder="Note"></textarea>
+            </div>
+            <input id="activity_item_activity_starred" name="activity_item[activity_starred]" type="checkbox" value="1">
+            <!-- <input id="activity_item_user_id" name="activity_item[user_id]" type="hidden" value="1"> -->
+            <input name="commit" type="submit" value="Add">
+            <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+          </form>
+        </div>
+        <!-- 5th board ends above -->
+        <!-- A board starts here: -->
+<!--         <div class="board">
+          <div class="board_title">
+            <input type="text" class="board_title_input" placeholder="Add appointment...">
+          </div>
+          <div class="datetime_picker">
+            <input type="text" class="board_date_input" placeholder="Oct/25">
+            <input type="text" class="board_time_start_input" placeholder="10:00">
+            <input type="text" class="board_time_end_input" placeholder="11:30">
+          </div>
+          <div class="board_note">
+            <textarea name="textarea_note" class="board_note_input" rows="3" pl</textarea>aceholder="Note">
+          </div>
+          <div class="board_bottom">
+            <span class="glyphicon glyphicon-star"></span>Drag or double click
+          </div>
+        </div>
+        <!== A board ends above -->
+      </div>
+    </div>

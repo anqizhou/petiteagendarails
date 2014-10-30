@@ -26,7 +26,8 @@ class ActivityItemsController < ApplicationController
   # POST /activity_items.json
   def create
     @activity_item = ActivityItem.new(activity_item_params)
-
+    #Changing @activity_item (object)'s activity_date property (method) and assign it to the parsed param. Because params is a hash, so we use the has syntax.
+    @activity_item.activity_date = Date.parse(activity_item_params[:activity_date])
     respond_to do |format|
       if @activity_item.save
         format.html { redirect_to @activity_item, notice: 'Activity item was successfully created.' }

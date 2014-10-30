@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141028085039) do
+ActiveRecord::Schema.define(version: 20141029061523) do
 
   create_table "activity_items", force: true do |t|
     t.string   "activity_item"
     t.date     "activity_date"
     t.time     "starting_time"
     t.time     "ending_time"
-    t.string   "activity_note"
+    t.text     "activity_note",    limit: 255
     t.boolean  "activity_starred"
     t.integer  "user_id"
     t.string   "activity_color"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20141028085039) do
   create_table "task_items", force: true do |t|
     t.string   "task_name"
     t.date     "task_date"
-    t.string   "task_note"
+    t.text     "task_note",    limit: 255
     t.boolean  "task_starred"
     t.integer  "user_id"
     t.string   "task_color"

@@ -26,6 +26,7 @@ class TaskItemsController < ApplicationController
   # POST /task_items.json
   def create
     @task_item = TaskItem.new(task_item_params)
+    @task_item.task_date = Date.parse(task_item_params[:task_date])
 
     respond_to do |format|
       if @task_item.save
