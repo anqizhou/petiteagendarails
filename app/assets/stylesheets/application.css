@@ -243,8 +243,15 @@ td {
 
 .tasks_table {
   float: left;
-  overflow: scroll;
+  overflow: auto;
   width: 90%;
+}
+
+#task-col-2, #task-col-3 {
+  height: 900px;
+  width: 48.57%;
+  float: left;
+  border: 1px solid #EBEBEB;
 }
 
 /*Calendar section ends above*/
